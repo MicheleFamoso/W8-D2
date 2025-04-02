@@ -4,6 +4,9 @@ import NavCustom from "./components/NavCustom";
 import FooterCustom from "./components/FooterCustom";
 import CardBook from "./components/CardBook";
 import AlertC from "./components/AlertC";
+import SingleBook from "./components/SingleBook";
+import BookList from "./components/BookList";
+import bookh from "./assets/books/history.json";
 
 function App() {
   return (
@@ -12,8 +15,7 @@ function App() {
         <NavCustom />
       </header>
       <main className=" flex-grow-1 bg-body-secondary">
-        <AlertC />
-        <CardBook />
+        <BookList book={bookh} />
       </main>
       <footer className=" d-flex justify-content-center">
         <FooterCustom />
