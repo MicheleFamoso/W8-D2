@@ -1,5 +1,6 @@
 import { Component } from "react";
 import Card from "react-bootstrap/Card";
+import CommentArea from "../CommentArea";
 
 class SingleBook extends Component {
   state = {
@@ -11,25 +12,28 @@ class SingleBook extends Component {
     const cardClass = this.state.selected ? "border-danger border-5" : "";
 
     return (
-      <Card
-        className={`h-100 shadow-lg ${cardClass}`} // Aggiungi la classe condizionale qui
-      >
-        <Card.Img
-          variant="top"
-          src={this.props.img}
-          onClick={() => {
-            // Toggle dello stato selezionato al click
-            this.setState({
-              selected: !this.state.selected,
-            });
-          }}
-        />
-        <Card.Body className="d-flex flex-column justify-content-between bg-dark">
-          <Card.Title className="text-center text-light">
-            {this.props.title}
-          </Card.Title>
-        </Card.Body>
-      </Card>
+      <>
+        <Card
+          className={`h-100 shadow-lg ${cardClass}`} // Aggiungi la classe condizionale qui
+        >
+          <Card.Img
+            variant="top"
+            src={this.props.img}
+            onClick={() => {
+              // Toggle dello stato selezionato al click
+              this.setState({
+                selected: !this.state.selected,
+              });
+            }}
+          />
+          <Card.Body className="d-flex flex-column justify-content-between bg-dark">
+            <Card.Title className="text-center text-light">
+              {this.props.title}
+            </Card.Title>
+            {this.state.selected && <CommentArea asin={this.props.asin} />}
+          </Card.Body>
+        </Card>
+      </>
     );
   }
 }

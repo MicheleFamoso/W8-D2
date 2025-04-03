@@ -6,7 +6,7 @@ import CardBook from "./components/CardBook";
 import AlertC from "./components/AlertC";
 import SingleBook from "./components/SingleBook";
 import BookList from "./components/BookList";
-import bookh from "./assets/books/history.json";
+import bookh from "./assets/books/romance.json";
 
 function App() {
   return (

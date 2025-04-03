@@ -38,7 +38,11 @@ class BookList extends Component {
               .map((sbook) => {
                 return (
                   <Col xs={12} md={4} lg={3} key={sbook.asin} className=" g-3">
-                    <SingleBook img={sbook.img} title={sbook.title} />
+                    <SingleBook
+                      img={sbook.img}
+                      title={sbook.title}
+                      asin={sbook.asin}
+                    />
                   </Col>
                 );
               })}
