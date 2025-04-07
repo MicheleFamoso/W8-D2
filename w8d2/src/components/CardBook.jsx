@@ -10,7 +10,7 @@ function CardBook() {
         <Row className=" g-5">
           {books.map((book) => {
             return (
-              <Col xs={12} md={4} lg={3} key={book.asin}>
+              <Col xs={12} md={12} lg={12} key={book.asin}>
                 <Card className=" h-100 shadow-lg ">
                   <Card.Img variant="top" src={book.img} />
                   <Card.Body className=" d-flex flex-column justify-content-between bg-dark ">
