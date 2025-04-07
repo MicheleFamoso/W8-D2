@@ -7,10 +7,6 @@ class BookList extends Component {
   state = {
     search: "",
   };
-  handleBookSelect = (asin) => {
-    this.setState({ selectedAsin: asin });
-  };
-
 
   render() {
     return (

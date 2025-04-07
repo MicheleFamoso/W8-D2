@@ -8,11 +8,11 @@ import {
   ListGroup,
   ListGroupItem,
   FormControl,
+  Button,
 } from "react-bootstrap";
 
 class AddComment extends Component {
   state = {
-<<<<<<< HEAD:w8d2/src/components/AddComment.jsx
     review: {
       comment: "",
       rate: "2",
@@ -49,21 +49,28 @@ class AddComment extends Component {
       <ListGroup>
         <ListGroupItem>
           <Form onSubmit={this.invia}>
-=======
-    comment: [],
-  };
-  render() {
-    return (
-      <ListGroup>
-        <ListGroupItem>
-          <Form>
->>>>>>> parent of e23ceed (Update AddComment.jsx):w8d2/src/AddComment.jsx
             <FormGroup>
               <FormLabel>Recensione</FormLabel>
-              <FormControl type="text" placeholder="Recensisci" />
+              <FormControl
+                type="text"
+                placeholder="Recensisci"
+                value={this.state.review.comment}
+                required
+                onChange={(e) => {
+                  this.setState({
+                    review: {
+                      ...this.state.review,
+                      comment: e.target.value,
+                    },
+                  });
+                }}
+              />
             </FormGroup>
+<<<<<<< HEAD:w8d2/src/AddComment.jsx
 <<<<<<< HEAD:w8d2/src/components/AddComment.jsx
 <<<<<<< HEAD:w8d2/src/components/AddComment.jsx
+=======
+>>>>>>> parent of 6c84cbf (.):w8d2/src/components/AddComment.jsx
             <Form.Group className="mb-2">
               <Form.Label>Valutazione</Form.Label>
               <Form.Control
@@ -87,12 +94,15 @@ class AddComment extends Component {
             </Form.Group>
 
             <Button type="submit">Invia</Button>
+<<<<<<< HEAD:w8d2/src/AddComment.jsx
 =======
 >>>>>>> parent of e23ceed (Update AddComment.jsx):w8d2/src/AddComment.jsx
 =======
 
             <Button>Invia</Button>
 >>>>>>> parent of 6dc8cef (...):w8d2/src/AddComment.jsx
+=======
+>>>>>>> parent of 6c84cbf (.):w8d2/src/components/AddComment.jsx
           </Form>
         </ListGroupItem>
       </ListGroup>
