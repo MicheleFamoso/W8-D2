@@ -28,7 +28,7 @@ class App extends Component {
           <Container>
             <Row>
               <Col xs="10" md="8">
-                <BookList book={bookh} onSelect={this.setSelectedAsin} />
+                <BookList book={bookh} onBookSelect={this.setSelectedAsin} />
               </Col>
               <Col>
                 <CommentArea asin={this.state.selectedAsin} />

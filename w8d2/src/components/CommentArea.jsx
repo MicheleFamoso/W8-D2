@@ -13,8 +13,7 @@ class CommentArea extends Component {
     if (!this.props.asin) return;
     fetch(Url + this.props.asin, {
       headers: {
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2VlN2ZjNjFkNDM2ZTAwMTVkYTI3MjAiLCJpYXQiOjE3NDM2ODM1MjYsImV4cCI6MTc0NDg5MzEyNn0.rxE_OUjsSq3JbBKF0_8uZjrZD-Tl6XhoPN5yFmV3ziI",
+        Authorization: "Bearer <TOKEN>", // Usa il tuo token valido qui
         "Content-Type": "application/json",
       },
     })
