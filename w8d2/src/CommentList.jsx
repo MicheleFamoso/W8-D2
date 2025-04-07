@@ -6,14 +6,14 @@ class CommentList extends Component {
     return (
       <ListGroup>
         {this.props.rec.length === 0 && (
-          <ListGroup.Item className="bg-dark text-light">
+          <ListGroup.Item className=" bg-dark text-light">
             Nessuna recensione
           </ListGroup.Item>
         )}
         {this.props.rec.map((comment) => (
           <ListGroup.Item
             key={comment._id}
-            className="bg-dark text-light d-flex justify-content-between"
+            className=" bg-dark text-light d-flex justify-content-between"
           >
             <p>{comment.comment}</p>
             <p>{comment.rate}/5</p>

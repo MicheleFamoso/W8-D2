@@ -46,7 +46,6 @@ class BookList extends Component {
                       img={sbook.img}
                       title={sbook.title}
                       asin={sbook.asin}
-                      onSelect={this.props.onBookSelect}
                     />
                   </Col>
                 );

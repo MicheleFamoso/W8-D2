@@ -1,3 +1,5 @@
+const Url = "https://striveschool-api.herokuapp.com/api/comments/";
+
 import { Component } from "react";
 import {
   Form,
@@ -8,28 +10,15 @@ import {
   FormControl,
 } from "react-bootstrap";
 
-const Url = "https://striveschool-api.herokuapp.com/api/comments/";
-
 class AddComment extends Component {
   state = {
 <<<<<<< HEAD:w8d2/src/components/AddComment.jsx
     review: {
       comment: "",
-      rate: "1",
+      rate: "2",
       elementId: this.props.asin,
     },
   };
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.asin !== this.props.asin) {
-      this.setState({
-        review: {
-          ...this.state.review,
-          elementId: this.props.asin,
-        },
-      });
-    }
-  }
 
   invia = (e) => {
     e.preventDefault();
@@ -40,18 +29,12 @@ class AddComment extends Component {
         "Content-Type": "application/json",
         Authorization:
           "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2VlN2ZjNjFkNDM2ZTAwMTVkYTI3MjAiLCJpYXQiOjE3NDM2ODM1MjYsImV4cCI6MTc0NDg5MzEyNn0.rxE_OUjsSq3JbBKF0_8uZjrZD-Tl6XhoPN5yFmV3ziI",
+        "Content-Type": "application/json",
       },
     })
       .then((response) => {
         if (response.ok) {
-          alert("Inviato!");
-          this.setState({
-            review: {
-              comment: "",
-              rate: "1",
-              elementId: this.props.asin,
-            },
-          });
+          alert("Inviato!!!");
         } else {
           throw new Error("Non Inviato!");
         }
@@ -64,7 +47,7 @@ class AddComment extends Component {
   render() {
     return (
       <ListGroup>
-        <ListGroupItem className="mt-4 mb-3">
+        <ListGroupItem>
           <Form onSubmit={this.invia}>
 =======
     comment: [],
@@ -79,6 +62,7 @@ class AddComment extends Component {
               <FormLabel>Recensione</FormLabel>
               <FormControl type="text" placeholder="Recensisci" />
             </FormGroup>
+<<<<<<< HEAD:w8d2/src/components/AddComment.jsx
 <<<<<<< HEAD:w8d2/src/components/AddComment.jsx
             <Form.Group className="mb-2">
               <Form.Label>Valutazione</Form.Label>
@@ -105,6 +89,10 @@ class AddComment extends Component {
             <Button type="submit">Invia</Button>
 =======
 >>>>>>> parent of e23ceed (Update AddComment.jsx):w8d2/src/AddComment.jsx
+=======
+
+            <Button>Invia</Button>
+>>>>>>> parent of 6dc8cef (...):w8d2/src/AddComment.jsx
           </Form>
         </ListGroupItem>
       </ListGroup>
