@@ -7,6 +7,10 @@ class BookList extends Component {
     search: "",
     selectedAsin: null,
   };
+  handleBookSelect = (asin) => {
+    this.setState({ selectedAsin: asin });
+  };
+
 
   render() {
     return (

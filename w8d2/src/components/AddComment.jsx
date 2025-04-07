@@ -6,13 +6,13 @@ import {
   ListGroup,
   ListGroupItem,
   FormControl,
-  Button,
 } from "react-bootstrap";
 
 const Url = "https://striveschool-api.herokuapp.com/api/comments/";
 
 class AddComment extends Component {
   state = {
+<<<<<<< HEAD:w8d2/src/components/AddComment.jsx
     review: {
       comment: "",
       rate: "1",
@@ -66,23 +66,20 @@ class AddComment extends Component {
       <ListGroup>
         <ListGroupItem className="mt-4 mb-3">
           <Form onSubmit={this.invia}>
+=======
+    comment: [],
+  };
+  render() {
+    return (
+      <ListGroup>
+        <ListGroupItem>
+          <Form>
+>>>>>>> parent of e23ceed (Update AddComment.jsx):w8d2/src/AddComment.jsx
             <FormGroup>
               <FormLabel>Recensione</FormLabel>
-              <FormControl
-                type="text"
-                placeholder="Recensisci"
-                value={this.state.review.comment}
-                required
-                onChange={(e) => {
-                  this.setState({
-                    review: {
-                      ...this.state.review,
-                      comment: e.target.value,
-                    },
-                  });
-                }}
-              />
+              <FormControl type="text" placeholder="Recensisci" />
             </FormGroup>
+<<<<<<< HEAD:w8d2/src/components/AddComment.jsx
             <Form.Group className="mb-2">
               <Form.Label>Valutazione</Form.Label>
               <Form.Control
@@ -106,6 +103,8 @@ class AddComment extends Component {
             </Form.Group>
 
             <Button type="submit">Invia</Button>
+=======
+>>>>>>> parent of e23ceed (Update AddComment.jsx):w8d2/src/AddComment.jsx
           </Form>
         </ListGroupItem>
       </ListGroup>
